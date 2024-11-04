@@ -5,6 +5,9 @@ function compra(){
   let img = document.querySelector("img")
 
     let pergunta = confirm("Vamos aproveitar esta promoção hoje?")
+  if (pergunta == false) {
+    alert("Tudo bem. Muito obrigado pela visita!")
+  } else{  
     let anoAtual = 2024
     let validar = parseInt(prompt("Me informe o ano de nascimento"))
     let res = anoAtual - validar
@@ -15,9 +18,8 @@ if (pergunta == true && res >= 18) {
     h1.innerHTML = "Muito obrigado, " +nome+ "!"
     h2.innerHTML = "Parabéns pela sua compra."
     img.src = "win.gif"
-
-
-} else{
+} else {
   alert("Desculpe, é necessário ser maior de 18 anos para efetuar a compra.")  
 }
+  }
 }
